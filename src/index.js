@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import {Provider} from "react-redux"
-// import {ConfigStore} from "../src/Components/R-state/ConfigStore"
+import {Provider} from 'react-redux'
+import { configStore } from './Components/D-state/configStore';
 
-// const local = ConfigStore()
+const local = configStore()
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider store={local}> */}
+    <Provider store={local}>
     <App />
-    {/* </Provider> */}
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
